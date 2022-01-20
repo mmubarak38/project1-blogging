@@ -6,7 +6,7 @@ const createAuthor= async function (req, res) {
         
         if (data) {
             let savedData = await AuthorModel.create(data)
-            res.status(200).send({ status: true, msg: savedData })
+            res.status(201).send({ status: true, msg: savedData })
         } else {
             res.status(400).send({ status: false, msg: "Mandatory body missing" })
         }

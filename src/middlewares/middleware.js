@@ -11,7 +11,7 @@ const mid = async function (req, res, next) {
         req.body.tokenId = validToken._id
         next()
     } catch (error) {
-        res.status(400).send({ status: false, msg: error })
+        res.status(500).send({ status: false, msg: error })
     }
 }
 module.exports.mid = mid;
